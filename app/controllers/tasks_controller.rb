@@ -28,7 +28,7 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
-    redirect_to tasks_path
+    redirect_to tasks_path  # redirecting to index page (tasks#index)
   end
 
   private
@@ -41,7 +41,3 @@ class TasksController < ApplicationController
     params.require(:task).permit(:title, :details, :completed)
   end
 end
-
-
-#  When I try to remove a task
-# Couldn't find Task with 'id'=14
